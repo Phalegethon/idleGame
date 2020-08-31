@@ -1,0 +1,7 @@
+.animated__numbers {
+    display: flex;
+    flex-direction: column;
+    text-transform: capitalize;
+    font-weight: bold;
+    font-size: 14px
+}
