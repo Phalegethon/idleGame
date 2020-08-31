@@ -1,0 +1,53 @@
+
+.game__wrapper {
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+    height: 100%;
+    width: 100%;
+}
+
+.civilian__wrapper {
+    padding: 10px;
+    background-color: var(--civilian-bg-color);
+    color: var(--civilian-text-color);
+    border-radius: 5px;
+    font-size: 14px
+}
+
+
+.sectors__wrapper {
+    padding: 10px;
+    background-color: var(--section-bg-color);
+}
+
+.sectors__output {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: flex-end;
+    background-color: green;
+    padding: 10px;
+    border-radius: 3px;
+    margin-bottom: 10px;
+}
+
+.sectors__button {
+    border: solid 1px #dedede;
+    padding: 10px;
+    border-radius: 5px;
+    font-size: 14px;
+    font-weight: bold;
+    background-color: green;
+    color: var(--main-text-color);
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    width: 100%;
+}
+.sectors__button span {
+    font-size: 18px;
+    display: inline-flex;
+    padding: 0 5px;
+    text-transform: capitalize;
+}
