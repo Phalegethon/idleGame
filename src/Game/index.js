@@ -1,6 +1,9 @@
 import React, { useEffect, useState } from 'react';
 import numeral from 'numeral';
-import Index from '../Components/AnimatedNumbers/index';
+import PropTypes from 'prop-types';
+import AnimatedNumbers from '../Components/AnimatedNumbers/index';
+
+import { format } from 'd3-format';
 
 import './game.css';
 
@@ -9,7 +12,7 @@ const Game = props => {
 
   const [section, setSection] = useState(1);
   const [sectionOutput, setSectionOutput] = useState(1);
-  const [sectionMultiplier, setSectionMultiplier] = useState(1.001);
+  const [sectionMultiplier, setSectionMultiplier] = useState(2.001);
 
   useEffect(() => {
     const interval = setInterval(() => {
@@ -24,19 +27,31 @@ const Game = props => {
   };
 
   const formatCivilianToSectors = number => {
+
     if (number < 1000) {
       return numeral(number).format('(0 a)');
     }
     return numeral(number).format('(0.00 a)');
   };
 
+  const formatCivilianToSectors2 = number => {
+    return format('~s')(number);
+  };
+
   return (
     <div className="game__wrapper">
       <div className="sectors__wrapper">
         <div className="sectors__output">
-          { name } output =
-          <Index className="gurkan" numbers={ formatCivilianToSectors(sectionOutput) }/>
-          { /*<FlipNumbers  height={ 12 } width={ 12 } color="" background="" play perspective={ 100 } numbers={ formatCivilianToSectors(sectionOutput) } />*/ }
+          <span>{ name } Output </span>
+
+          <div>
+            numeral :
+            <AnimatedNumbers numbers={ formatCivilianToSectors(sectionOutput) }/>
+          </div>
+          <div>
+            d3 :
+            <AnimatedNumbers numbers={ formatCivilianToSectors2(sectionOutput) }/>
+          </div>
         </div>
         <button
           className="sectors__button"
@@ -49,6 +64,12 @@ const Game = props => {
       </div>
     </div>
   );
+};
+
+Game.propTypes = {
+  civilian: PropTypes.number,
+  setCivilian: PropTypes.func,
+  name: PropTypes.string,
 };
 
 export default Game;

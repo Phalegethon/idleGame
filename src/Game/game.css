@@ -12,7 +12,10 @@
     background-color: var(--civilian-bg-color);
     color: var(--civilian-text-color);
     border-radius: 5px;
-    font-size: 14px
+    font-size: 14px;
+    display: flex;
+    flex-direction: row;
+    justify-content: space-between;
 }
 
 
@@ -23,27 +26,32 @@
 
 .sectors__output {
     display: flex;
-    flex-direction: column;
-    justify-content: center;
+    flex-direction: row;
+    justify-content: space-between;
     align-items: flex-end;
-    background-color: green;
+    background: linear-gradient(180deg, #28616b, #0a2d33);
     padding: 10px;
-    border-radius: 3px;
-    margin-bottom: 10px;
+    border-radius: 5px 5px 0 0;
+}
+
+.sectors__output span {
+    font-weight: bold;
+    font-size: 12px
 }
 
 .sectors__button {
-    border: solid 1px #dedede;
+    border: none;
     padding: 10px;
-    border-radius: 5px;
+    border-radius: 0 0 5px 5px;
     font-size: 14px;
     font-weight: bold;
-    background-color: green;
+    background-color: #28616b;
     color: var(--main-text-color);
     display: flex;
     justify-content: center;
     align-items: center;
     width: 100%;
+    outline: none;
 }
 .sectors__button span {
     font-size: 18px;

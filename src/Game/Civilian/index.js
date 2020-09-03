@@ -1,15 +1,21 @@
-import React, { useState } from 'react';
+import React  from 'react';
+import PropTypes from 'prop-types';
 
 import numeral from 'numeral';
-import FlipNumbers from 'react-flip-numbers';
+import AnimatedNumbers from '../../Components/AnimatedNumbers/index';
 
 const Civilian = props => {
   const { civilian } = props;
   return (
     <div className="civilian__wrapper">
-      Civilian - <FlipNumbers className="gurkan" height={ 20 } width={ 20 } color="" background="" play perspective={ 100 } numbers={ numeral(civilian).format('(0 a)') } />
+      <span>Civilian</span>
+      <AnimatedNumbers  numbers={ numeral(civilian).format('(0 a)') }/>
     </div>
   );
+};
+
+Civilian.propTypes = {
+  civilian: PropTypes.number
 };
 
 export default Civilian;

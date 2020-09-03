@@ -22,7 +22,7 @@ function App () {
       <Civilian civilian={ civilian }/>
       <Game civilian={ civilian } setCivilian={ setCivilian } name="Hangar" />
       <Game civilian={ civilian } setCivilian={ setCivilian } name="Farm" />
-      { /*<Game civilian={civilian} setCivilian={setCivilian} name="Barrack"/>*/ }
+      <Game civilian={ civilian } setCivilian={ setCivilian } name="Barrack"/>
       { /*<Game civilian={civilian} setCivilian={setCivilian} name="headQuarter"/>*/ }
 
     </div>
