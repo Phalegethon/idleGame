@@ -184,16 +184,6 @@
         "ignoreRestSiblings": false
       }
     ],
-    "react/jsx-curly-spacing": [
-      2,
-      {
-        "when": "always",
-        "children": true,
-        "spacing": {
-          "objectLiterals": "always"
-        }
-      }
-    ],
     "no-descending-specificity": 0
   }
 }
