@@ -12,7 +12,7 @@ const Game = props => {
 
   const [section, setSection] = useState(1);
   const [sectionOutput, setSectionOutput] = useState(1);
-  const [sectionMultiplier, setSectionMultiplier] = useState(2.001);
+  const [sectionMultiplier, setSectionMultiplier] = useState(1.101);
 
   useEffect(() => {
     const interval = setInterval(() => {
